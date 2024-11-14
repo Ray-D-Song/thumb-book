@@ -4,6 +4,7 @@ pub use libs::md::markdown_to_html;
 use std::path::Path;
 use std::env::current_dir;
 use libs::generate::generate_routes;
+use libs::generate::generate_search_index;
 use libs::process::process_index;
 
 fn main() {
@@ -31,11 +32,14 @@ fn main() {
 
     // process posts
     let posts_vec = process_posts(&posts_dir.to_str().unwrap(), &posts_output_dir.to_str().unwrap());
+    let posts = posts_vec.unwrap();
     // generate routes
-    let routes = generate_routes(&posts_vec.unwrap()).unwrap();
+    let routes = generate_routes(&posts).unwrap();
     // process index
     let output_index_path = Path::new(&current_dir).join("dist").join("index.html");
     let _ = process_index(&current_dir.join("index.md").to_str().unwrap(), &output_index_path.to_str().unwrap(), &routes);
+    // generate search index
+    generate_search_index(&posts).unwrap();
 
     println!("Done!");
 }
