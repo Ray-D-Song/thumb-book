@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index template</title>
+  <link rel="stylesheet" href="assets/index.css">
+</head>
+<body class="bg-zinc-950 max-w-6xl mx-auto text-zinc-50 min-h-screen m-0">
+  <main class="flex gap-6">
+    <section class="w-[180px] h-screen space-y-4 border-r-solid border-zinc-800 pr-8 ml-8">
+      <h3 class="text-lg font-[450] text-zinc-50 border-b-solid border-zinc-800 pb-4">index template</h3>
+      <a href="/posts/test.html" class="no-underline block p-1 rounded-lg flex gap-2 justify-between items-center text-zinc-50">
+        <span class="post-title block mb-2">How to use this template</span>
+      </a>
+    </section>
+    <section class="flex-1 space-y-4 flex flex-col items-center">
+      <div class="self-end mt-2">
+        <div class="relative w-full max-w-sm">
+          <div class="relative">
+            <svg 
+              class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-500"
+              xmlns="http://www.w3.org/2000/svg" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke-width="2" 
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+            
+            <input 
+              type="search"
+              placeholder="search..." 
+              class="flex h-10 w-full text-zinc-50 placeholder:text-zinc-100 rounded-md border-solid border-1px border-zinc-800 bg-zinc-950 px-3 py-2 pl-10 pr-28 text-sm ring-offset-zinc-950 focus:outline-none focus:ring-2 focus:ring-zinc-800 focus:ring-offset-2"
+            >
+            
+            <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
+              <kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border border-zinc-800 bg-zinc-900 px-1.5 text-[10px] font-medium text-zinc-400">
+                <span class="text-xs">⌘</span>K
+              </kbd>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prose dark:prose-invert w-2xl">
+        <h1>Hey</h1>
+        <h2 class="text-xl font-semibold text-zinc-50">Hey</h2>
+        <p class="text-zinc-300 leading-relaxed">This is a test index.md file.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
