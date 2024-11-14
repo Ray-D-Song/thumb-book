@@ -1,0 +1,8 @@
+[package]
+name = "thumb-book"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pulldown-cmark = "0.9"
+toml = "0.5"
